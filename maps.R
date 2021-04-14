@@ -4,7 +4,8 @@ library(usmap)
 library(plotly)
 source("data.R")
 library(rstanarm)
-
+library(gtsummary)
+library(gt)
 
 # interest by city for "fitness"
 
@@ -94,10 +95,66 @@ linear_regress <- trends_region %>%
   pivot_wider(names_from = keyword,
               values_from = hits)
 
+# creating fits for all variables
 
-fit_1 <- stan_glm( data = linear_regress,
+fit_fitness <- stan_glm( data = linear_regress,
                    formula = fitness ~ sleep + `human performance`+ WHOOP,
                    refresh = 0)
-
+fit_sleep <- stan_glm( data = linear_regress,
+                   formula = sleep ~  fitness + `human performance`+ WHOOP,
+                   refresh = 0)
+fit_human_performance <- stan_glm( data = linear_regress,
+                   formula = `human performance` ~ sleep + fitness + WHOOP,
+                   refresh = 0)
+fit_WHOOP <- stan_glm( data = linear_regress,
+                   formula = WHOOP ~  fitness + sleep + `human performance`,
+                   refresh = 0)
 
 print(fit_1, detials = FALSE )
+print(fit_2, detials = FALSE )
+
+# making a table with fits
+
+model_table_fitness <- fit_fitness %>%
+  tbl_regression(include = everything(),
+                 intercept = TRUE,
+                 estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+  as_gt() %>%
+  tab_header(title = "A Model of 'Fitness' on other Keywords",
+             subtitle = "The Results are ambigious") 
+
+model_table_sleep <- fit_sleep %>%
+  
+  # tbl_regression puts a fit into a table
+  
+  # we need intercept so set it equal to true 
+  
+  tbl_regression(include = everything(),
+                 intercept = TRUE,
+                 estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+  
+  # gt() helps put a label and title to the table 
+  
+  as_gt() %>%
+  
+  # Adding title, subtitle and source notes
+  
+  tab_header(title = "A Model of 'Fitness' on other Keywords",
+             subtitle = "The Results are ambigious") 
+
+
+model_table_human_performance <- fit_human_performance %>%
+  tbl_regression(include = everything(),
+                 intercept = TRUE,
+                 estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+  as_gt() %>%
+  tab_header(title = "A Model of 'Fitness' on other Keywords",
+             subtitle = "The Results are ambigious") 
+
+model_table_WHOOP <- fit_WHOOP %>%
+  tbl_regression(include = everything(),
+                 intercept = TRUE,
+                 estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+  as_gt() %>%
+  tab_header(title = "A Model of 'Fitness' on other Keywords",
+             subtitle = "The Results are ambigious") 

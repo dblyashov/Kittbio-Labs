@@ -101,12 +101,12 @@ ui <- navbarPage(
           sidebarLayout(
                sidebarPanel(
                  selectInput(
-                   "plot_type",
-                   "Plot Type",
-                   c("Option A" = "a", "Option B" = "b")
+                   "model_type",
+                   "Keyword for Regression",
+                   c("Fitness","sleep","human_performance", "WHOOP")
                              )),
                  mainPanel(
-    
+                   gt_output("table")
                            ) 
                         )
            )),
@@ -152,6 +152,25 @@ ui <- navbarPage(
 
 server <- function(input, output) {
 
+  
+# table for model page
+  
+  output$table <- render_gt({
+    
+    if(input$model_type == "Fitness"){
+      model_table_fitness
+    }
+    if(input$model_type == "sleep"){
+      model_table_sleep
+    }
+    if(input$model_type == "human_performance"){
+      model_table_human_performance
+    }
+    if(input$model_type == "WHOOP"){
+      model_table_WHOOP
+    }
+    
+  })
 
 # interactive city top 10 table using inputID = term
 
