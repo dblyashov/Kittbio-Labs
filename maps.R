@@ -96,7 +96,7 @@ linear_regress <- trends_region %>%
 
 
 fit_1 <- stan_glm( data = linear_regress,
-                   formula = fitness ~ ....
+                   formula = fitness ~ sleep + `human performance`+ WHOOP,
                    refresh = 0)
 
 
