@@ -101,9 +101,9 @@ ui <- navbarPage(
           sidebarLayout(
                sidebarPanel(
                  selectInput(
-                   "model_type",
-                   "Keyword for Regression",
-                   c("Fitness","sleep","human_performance", "WHOOP")
+                   inputId = "model_type",
+                   label = "Keyword for Regression",
+                   choices = c("Fitness","Sleep","Human_Performance", "WHOOP")
                              )),
                  mainPanel(
                    gt_output("table")
@@ -144,6 +144,10 @@ ui <- navbarPage(
              width = 9,
                h3("Model Map"),
              plotlyOutput(outputId = "model_map")
+           ),
+           column(
+             width = 4,
+             tableOutput("customer_model_regions")
            ))
   
               ))
@@ -154,16 +158,22 @@ server <- function(input, output) {
 
   
 # table for model page
-  
+## CANT FIGURE OUT WHY ONLY WHOOP TABLE LOADS!  
   output$table <- render_gt({
     
     if(input$model_type == "Fitness"){
-      model_table_fitness
+      fit_fitness %>%
+        tbl_regression(include = everything(),
+                       intercept = TRUE,
+                       estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+        as_gt() %>%
+        tab_header(title = "A Model of 'Fitness' on other Keywords",
+                   subtitle = "The Results are ambigious")
     }
-    if(input$model_type == "sleep"){
+    if(input$model_type == "Sleep"){
       model_table_sleep
     }
-    if(input$model_type == "human_performance"){
+    if(input$model_type == "Human_Performance"){
       model_table_human_performance
     }
     if(input$model_type == "WHOOP"){
@@ -209,9 +219,8 @@ server <- function(input, output) {
   })
   
   
-  # slider outputs
+# slider outputs
   
-  # output$value <- renderPrint({ input$fitness })
 # making a table with slider inputs 
   
   output$model_map <- renderPlotly({
@@ -233,6 +242,22 @@ server <- function(input, output) {
         geo = list(
           scope = 'usa')
       )
+    
+  })
+  
+  
+# adding top 10 regions table with new model data
+  
+  output$customer_model_regions <- renderTable({
+    
+    trends_region %>%
+      pivot_wider(names_from = keyword,
+                  values_from = hits) %>% 
+      mutate(model = (input$fitness*fitness)/100 + (input$sleep*sleep)/100 + (input$human_performance*`human performance`)/100 + (input$WHOOP*WHOOP)/100) %>% 
+      select(state, model) %>% 
+      as_tibble() %>% 
+      arrange(desc(model)) %>% 
+      slice(1:10)
     
   })
   

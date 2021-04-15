@@ -10,11 +10,12 @@ library(gt)
 # interest by city for "fitness"
 
 
-# top10_fitness_city <- trends_city %>% 
-#  filter(keyword == "fitness") %>%
-#  as_tibble() %>% 
-#  slice(1:10) %>% 
-#  select(City = location, Interest = hits)
+ top10_fitness_city <- trends_city %>% 
+  filter(keyword == "fitness") %>%
+  as_tibble() %>% 
+  arrange(desc(hits)) %>% 
+  slice(1:10) %>% 
+  select(City = location, Interest = hits)
 
 # interest by region on US MAP for "fitness"
 

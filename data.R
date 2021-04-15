@@ -1,5 +1,8 @@
 library(gtrendsR)
 library(tidyverse)
+library(rstanarm)
+library(gt)
+library(gtsummary)
 
 # pulling all keywords from google trends into a variable
 # make sure to include low search volume = true 
@@ -75,7 +78,7 @@ model_table_sleep <- fit_sleep %>%
                  intercept = TRUE,
                  estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
   as_gt() %>%
-  tab_header(title = "A Model of 'Fitness' on other Keywords",
+  tab_header(title = "A Model of 'Sleep' on other Keywords",
              subtitle = "The Results are ambigious") 
 
 
@@ -84,7 +87,7 @@ model_table_human_performance <- fit_human_performance %>%
                  intercept = TRUE,
                  estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
   as_gt() %>%
-  tab_header(title = "A Model of 'Fitness' on other Keywords",
+  tab_header(title = "A Model of 'Human Performance' on other Keywords",
              subtitle = "The Results are ambigious") 
 
 model_table_WHOOP <- fit_WHOOP %>%
@@ -92,6 +95,6 @@ model_table_WHOOP <- fit_WHOOP %>%
                  intercept = TRUE,
                  estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
   as_gt() %>%
-  tab_header(title = "A Model of 'Fitness' on other Keywords",
+  tab_header(title = "A Model of 'WHOOP' on other Keywords",
              subtitle = "The Results are ambigious") 
 
