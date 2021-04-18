@@ -138,6 +138,31 @@ ui <- navbarPage(
                          label = "WHOOP", 
                          min = 0, 
                          max = 100, 
+                         value = 0),
+             sliderInput("human_performance",
+                         label = "Human Performance", 
+                         min = 0, 
+                         max = 100, 
+                         value = 0),
+             sliderInput("human_performance",
+                         label = "Human Performance", 
+                         min = 0, 
+                         max = 100, 
+                         value = 0),
+             sliderInput("human_performance",
+                         label = "Human Performance", 
+                         min = 0, 
+                         max = 100, 
+                         value = 0),
+             sliderInput("human_performance",
+                         label = "Human Performance", 
+                         min = 0, 
+                         max = 100, 
+                         value = 0),
+             sliderInput("human_performance",
+                         label = "Human Performance", 
+                         min = 0, 
+                         max = 100, 
                          value = 0)
            ),
            column(
@@ -146,13 +171,17 @@ ui <- navbarPage(
              plotlyOutput(outputId = "model_map")
            ),
            column(
-             width = 4,
+             width = 4, align="right",
              tableOutput("customer_model_regions")
+           ),
+           column(
+             width = 4,
+             tableOutput("customer_model_cities")
            ))
   
               ))
 
-# Define server logic required to draw a histogram
+# Define server logic 
 
 server <- function(input, output) {
 
@@ -188,7 +217,8 @@ server <- function(input, output) {
   
     trends_city %>%
       filter(keyword == input$keyword) %>%
-      as_tibble() %>% 
+      as_tibble() %>%
+      arrange(desc(hits)) %>% 
       slice(1:10) %>% 
       select(City = location, Interest = hits)
   
@@ -254,14 +284,30 @@ server <- function(input, output) {
       pivot_wider(names_from = keyword,
                   values_from = hits) %>% 
       mutate(model = (input$fitness*fitness)/100 + (input$sleep*sleep)/100 + (input$human_performance*`human performance`)/100 + (input$WHOOP*WHOOP)/100) %>% 
-      select(state, model) %>% 
+      select(State = state, Interest = model) %>% 
       as_tibble() %>% 
-      arrange(desc(model)) %>% 
+      arrange(desc(Interest)) %>% 
       slice(1:10)
     
   })
   
-  
+
+# adding top 10 cities table with new model data
+# need to fix last part   
+  output$customer_model_cities <- renderTable({
+    
+    trends_city %>%
+      pivot_wider(names_from = keyword,
+                  values_from = hits) %>% 
+      mutate(model = (input$fitness*fitness)/100 + (input$sleep*sleep)/100 + (input$WHOOP*WHOOP)/100) %>% 
+      select(City = location, Interest = model) %>% 
+      as_tibble() %>% 
+      arrange(desc(Interest)) %>% 
+      slice(1:10) %>% 
+      as_gt() %>% 
+      tab_header(title = "Top Interest by Cities")
+    
+  })
 }
 
 # Run the application 

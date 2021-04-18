@@ -1,0 +1,205 @@
+location,hits,keyword,geo,gprop
+Arizona,100,fitness,US,web
+Rhode Island,91,fitness,US,web
+Colorado,81,fitness,US,web
+Nevada,79,fitness,US,web
+New Mexico,79,fitness,US,web
+Illinois,79,fitness,US,web
+Delaware,79,fitness,US,web
+Florida,79,fitness,US,web
+New Jersey,77,fitness,US,web
+California,77,fitness,US,web
+Minnesota,76,fitness,US,web
+Pennsylvania,76,fitness,US,web
+Washington,75,fitness,US,web
+Connecticut,75,fitness,US,web
+Ohio,74,fitness,US,web
+Georgia,74,fitness,US,web
+Texas,74,fitness,US,web
+Massachusetts,73,fitness,US,web
+Utah,72,fitness,US,web
+Hawaii,71,fitness,US,web
+Oregon,71,fitness,US,web
+Virginia,70,fitness,US,web
+Wisconsin,69,fitness,US,web
+Maryland,68,fitness,US,web
+New York,67,fitness,US,web
+Michigan,67,fitness,US,web
+Indiana,66,fitness,US,web
+Idaho,65,fitness,US,web
+Missouri,65,fitness,US,web
+North Dakota,65,fitness,US,web
+North Carolina,64,fitness,US,web
+Louisiana,64,fitness,US,web
+South Carolina,64,fitness,US,web
+New Hampshire,63,fitness,US,web
+Nebraska,63,fitness,US,web
+District of Columbia,62,fitness,US,web
+Alabama,60,fitness,US,web
+Montana,59,fitness,US,web
+Arkansas,59,fitness,US,web
+Tennessee,59,fitness,US,web
+Iowa,59,fitness,US,web
+Vermont,58,fitness,US,web
+Wyoming,58,fitness,US,web
+Kansas,57,fitness,US,web
+Alaska,57,fitness,US,web
+Kentucky,54,fitness,US,web
+Oklahoma,54,fitness,US,web
+Maine,51,fitness,US,web
+West Virginia,51,fitness,US,web
+Mississippi,49,fitness,US,web
+South Dakota,46,fitness,US,web
+Wyoming,100,sleep,US,web
+Kentucky,96,sleep,US,web
+Alabama,96,sleep,US,web
+Utah,95,sleep,US,web
+Alaska,95,sleep,US,web
+Idaho,95,sleep,US,web
+North Dakota,94,sleep,US,web
+Washington,93,sleep,US,web
+New Hampshire,93,sleep,US,web
+Oklahoma,93,sleep,US,web
+Minnesota,92,sleep,US,web
+New Mexico,92,sleep,US,web
+Indiana,91,sleep,US,web
+Arkansas,90,sleep,US,web
+Tennessee,90,sleep,US,web
+Maryland,90,sleep,US,web
+Vermont,90,sleep,US,web
+West Virginia,90,sleep,US,web
+Massachusetts,90,sleep,US,web
+Virginia,89,sleep,US,web
+Montana,88,sleep,US,web
+Colorado,88,sleep,US,web
+Missouri,88,sleep,US,web
+California,88,sleep,US,web
+Maine,88,sleep,US,web
+North Carolina,87,sleep,US,web
+Pennsylvania,87,sleep,US,web
+Kansas,87,sleep,US,web
+Arizona,87,sleep,US,web
+Hawaii,87,sleep,US,web
+Oregon,86,sleep,US,web
+Iowa,86,sleep,US,web
+Georgia,86,sleep,US,web
+Connecticut,86,sleep,US,web
+Michigan,85,sleep,US,web
+Illinois,85,sleep,US,web
+Louisiana,85,sleep,US,web
+Rhode Island,85,sleep,US,web
+Ohio,85,sleep,US,web
+Mississippi,85,sleep,US,web
+New Jersey,84,sleep,US,web
+Delaware,84,sleep,US,web
+Nebraska,84,sleep,US,web
+Nevada,83,sleep,US,web
+Texas,83,sleep,US,web
+South Carolina,83,sleep,US,web
+Wisconsin,83,sleep,US,web
+District of Columbia,82,sleep,US,web
+South Dakota,82,sleep,US,web
+New York,79,sleep,US,web
+Florida,78,sleep,US,web
+North Dakota,100,human performance,US,web
+South Dakota,81,human performance,US,web
+Nebraska,24,human performance,US,web
+Alabama,22,human performance,US,web
+Utah,22,human performance,US,web
+New Mexico,19,human performance,US,web
+Kentucky,17,human performance,US,web
+Florida,16,human performance,US,web
+Virginia,16,human performance,US,web
+South Carolina,16,human performance,US,web
+Tennessee,15,human performance,US,web
+West Virginia,15,human performance,US,web
+Kansas,15,human performance,US,web
+Oklahoma,14,human performance,US,web
+Indiana,14,human performance,US,web
+Georgia,14,human performance,US,web
+Nevada,14,human performance,US,web
+Louisiana,14,human performance,US,web
+Colorado,14,human performance,US,web
+District of Columbia,13,human performance,US,web
+Iowa,13,human performance,US,web
+North Carolina,13,human performance,US,web
+Missouri,13,human performance,US,web
+Texas,13,human performance,US,web
+Washington,13,human performance,US,web
+Wisconsin,12,human performance,US,web
+Arizona,12,human performance,US,web
+Connecticut,12,human performance,US,web
+Michigan,12,human performance,US,web
+New York,12,human performance,US,web
+Ohio,11,human performance,US,web
+Massachusetts,11,human performance,US,web
+Maryland,11,human performance,US,web
+Idaho,11,human performance,US,web
+Pennsylvania,11,human performance,US,web
+Rhode Island,11,human performance,US,web
+New Jersey,10,human performance,US,web
+California,10,human performance,US,web
+Oregon,10,human performance,US,web
+Illinois,9,human performance,US,web
+Minnesota,9,human performance,US,web
+Arkansas,7,human performance,US,web
+Mississippi,6,human performance,US,web
+Montana,NA,human performance,US,web
+New Hampshire,NA,human performance,US,web
+Wyoming,NA,human performance,US,web
+Delaware,NA,human performance,US,web
+Hawaii,NA,human performance,US,web
+Maine,NA,human performance,US,web
+Alaska,NA,human performance,US,web
+Vermont,NA,human performance,US,web
+Alaska,100,WHOOP,US,web
+Massachusetts,92,WHOOP,US,web
+District of Columbia,75,WHOOP,US,web
+Vermont,63,WHOOP,US,web
+Colorado,63,WHOOP,US,web
+South Dakota,62,WHOOP,US,web
+Connecticut,61,WHOOP,US,web
+New Hampshire,54,WHOOP,US,web
+Minnesota,54,WHOOP,US,web
+Rhode Island,53,WHOOP,US,web
+Idaho,52,WHOOP,US,web
+Utah,52,WHOOP,US,web
+Virginia,51,WHOOP,US,web
+Iowa,50,WHOOP,US,web
+Nebraska,50,WHOOP,US,web
+Wyoming,49,WHOOP,US,web
+Maine,49,WHOOP,US,web
+Montana,48,WHOOP,US,web
+Missouri,47,WHOOP,US,web
+Georgia,47,WHOOP,US,web
+New Jersey,47,WHOOP,US,web
+North Carolina,46,WHOOP,US,web
+Ohio,46,WHOOP,US,web
+Kentucky,46,WHOOP,US,web
+Texas,46,WHOOP,US,web
+California,46,WHOOP,US,web
+Tennessee,45,WHOOP,US,web
+Oregon,45,WHOOP,US,web
+Michigan,45,WHOOP,US,web
+Pennsylvania,44,WHOOP,US,web
+Arkansas,43,WHOOP,US,web
+Illinois,43,WHOOP,US,web
+South Carolina,43,WHOOP,US,web
+Florida,43,WHOOP,US,web
+New York,42,WHOOP,US,web
+Arizona,42,WHOOP,US,web
+Indiana,41,WHOOP,US,web
+Wisconsin,40,WHOOP,US,web
+Oklahoma,39,WHOOP,US,web
+Washington,38,WHOOP,US,web
+Kansas,38,WHOOP,US,web
+Louisiana,38,WHOOP,US,web
+Alabama,37,WHOOP,US,web
+Maryland,37,WHOOP,US,web
+Mississippi,36,WHOOP,US,web
+Hawaii,35,WHOOP,US,web
+Nevada,34,WHOOP,US,web
+North Dakota,30,WHOOP,US,web
+New Mexico,27,WHOOP,US,web
+West Virginia,27,WHOOP,US,web
+Delaware,23,WHOOP,US,web

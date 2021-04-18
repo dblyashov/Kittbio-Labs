@@ -8,20 +8,24 @@ library(gtsummary)
 # make sure to include low search volume = true 
 
 trends_keywords <-gtrends(keyword = c("fitness", "sleep", "human performance", "WHOOP"),
-                         time = "today 12-m", geo="US", low_search_volume = TRUE)
+                         time = "today 12-m", geo="US" #low_search_volume = TRUE
+                         )
 
-# selecting which lists (interest by region or city)
+# saving gtrends results into csv file 
 
-trends_keywords_region <- trends_keywords[["interest_by_region"]] %>% 
+write_csv(trends_keywords$interest_by_region, "trends_regions.csv")
+trends_region <- read.csv("trends_regions.csv") %>% 
   rename(state = location)
-trends_keywords_city <- trends_keywords[["interest_by_city"]]
+
+write_csv(trends_keywords$interest_by_city, "trends_city.csv")
+trends_city <- read.csv("trends_city.csv") 
+
+
 
 # removing missing data points 
-# changed na values to 0 
- trends_region <- trends_keywords_region
- trends_region[is.na(trends_region)]<-0
- 
- trends_city <- trends_keywords_city  
+# changed na values to 0
+
+ trends_region[is.na(trends_region)]<-0 
  trends_city[is.na(trends_city)]<-0
 
 # removing extra data sets
@@ -51,7 +55,8 @@ linear_regress <- trends_region %>%
 
 fit_fitness <- stan_glm( data = linear_regress,
                          formula = fitness ~ sleep + `human performance`+ WHOOP,
-                         refresh = 0)
+                         refresh = 0) 
+
 fit_sleep <- stan_glm( data = linear_regress,
                        formula = sleep ~  fitness + `human performance`+ WHOOP,
                        refresh = 0)
