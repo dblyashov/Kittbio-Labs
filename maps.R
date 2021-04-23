@@ -159,3 +159,48 @@ model_table_WHOOP <- fit_WHOOP %>%
   as_gt() %>%
   tab_header(title = "A Model of 'Fitness' on other Keywords",
              subtitle = "The Results are ambigious") 
+
+
+# working on customer model city top 10 table
+
+trial <- trends_city %>%
+  pivot_wider(names_from = keyword,
+              values_from = hits) %>% 
+  mutate(model = (25*fitness)/100 + (25*sleep)/100 + (50*WHOOP)/100)%>% 
+  select(City = location, Interest = model)%>% 
+  as_tibble() %>% 
+  arrange(desc(Interest))%>% 
+  slice(1:10) %>% 
+
+#as_gt()%>% 
+#tab_header(title = "Top Interest by Cities")
+  
+  
+# working on merging two of my gtrends tables 
+# this process works 
+  
+  set_1 <- read.csv("gtrends_set1.csv")
+  set_2 <- read.csv("gtrends_set2.csv")
+  
+  merged <- rbind(set_1, set_2)
+  merged[is.na(merged)]<-0
+
+  trial1 <- merged %>%
+    pivot_wider(names_from = keyword,
+                values_from = hits)
+  
+# fixing the interactive model for cities
+  
+  test <- trends_city %>%
+    pivot_wider(names_from = keyword,
+                values_from = hits,
+                values_fill = 0) %>%
+    select(-`health supplements`) %>% 
+    select(-`improve health`) %>% 
+    mutate(model =(1*`time management`)/100 + (1*`meditation`)/100 + (1*exercise)/100 + (1*Peleton)/100 + (1*WHOOP)/100) %>% 
+    select(City = location, Interest = model) %>% 
+    as_tibble() %>% 
+    arrange(desc(Interest)) %>% 
+    slice(1:10)
+  
+  
