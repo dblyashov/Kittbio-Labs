@@ -28,71 +28,52 @@ ui <- navbarPage(
               Google search trends for the keyword improve sleep should in theory 
               provide a glimpse into potential customers across the United States.
               Within our application we include the following pages each with its
-              own ability to explore data. 
-              
-              1. Google Search Trends: a basic analysis of search interest broken
+              own ability to explore data. <h5>"),
+           HTML("<h5> 1. Google Search Trends: a basic analysis of search interest broken
                                        down by keyword. This data is then displayed
                                        by the Top 10 Cities as well as a national 
-                                       breakdown on a US Map. 
-              
-              
-              
-              
-               To begin the anaylsis certain keyterms trends
-              are pulled from Google Search Trends and plotted by 'Interest
-              across Cities' as well as 'Interest by State' on a map of the US. 
-              The ability to explore a set of keywords is avaliable in the 
-              'Google Search Trends' tab. 
-              
-              Secondly, I attempted to create an adjustable value weighted model
-              for sets of keywords. This allows the user to change values under
-              each keyword to explore the best model exibiting the customer 
-              demographic. The 'heat map' for the user created model is then 
-              plotted across states on a US map.<h5>")
-              
-              ,
+                                       breakdown on a US Map. <h5>"),
+           HTML("<h5> 2. Customer Demo. Model: an interactive analysis allowing users
+                                       to set certain weights to keywords on a 0-100 scale,
+                                       modeling the potential customer demographic. Results
+                                       are iprojected on a United States heat map as well 
+                                       as the Top 10 States & Regions are displayed. <h5>"),
            h3("About Me"),
-           numericInput(
-             inputId = "trial",
-             label = "trial",
-             value = 0,
-             min = 0,
-             max = 100,
-             step = 1,
-             width = NULL
-           ),
-           p("My name is Dennis Blyashov and I study Economics and 
+           HTML("<h5>My name is Dennis Blyashov and I study Economics and 
              Neuroscience. 
-             You can reach me at dblyashov@college.harvard.edu."))),
+             You can reach me at dblyashov@college.harvard.edu.<h5>"))),
   
   tabPanel("Google Trends",
            titlePanel("Keyword Analysis"),
         fluidPage(theme = shinytheme("cosmo"),
            column(
              width = 9,
-             p("Select out of the dropdown list a google search term to analyze
-                 by interest across city / US states")
+             p("Use the dropdown box to select a desired keyword. Anaylze
+               google search trend interest broken down across US Cities / States.
+               Hover over the US Map to examine the interest for the selected 
+               keyword on a scale of 0-100")
                   ),
            column(
              width = 3,
              selectInput(
                           inputId = "keyword",
                           label = "Search Term",
-                          choices = c("fitness", "sleep", "human performance", "WHOOP"),
-                          selected = "fitness")
+                          choices = c("health related fitness", "improve focus",
+                                      "improve sleep", "improve health",
+                                      "health supplements","time management",
+                                      "manage stress","meditation","exercise",
+                                      "Peleton","WHOOP"),
+                          selected = "meditation")
                   ),
            column(
-             width = 4,
-             wellPanel(
+             width = 3,
                h3("Interest by US city"),
-               tableOutput("interactive_city_table"))
-                  ),
+               align="middle",
+               tableOutput("interactive_city_table")),
            column(
-             width = 8,
-             wellPanel(
-               h3("Interest by Region US MAP"),
+             width = 9,
+               h3("Interest by Region US MAP"),align="middle",
                plotlyOutput(outputId = "us_region_plot")
-                  )
            ))),
   
   tabPanel("Model",
@@ -114,23 +95,63 @@ ui <- navbarPage(
   tabPanel("Customer Demo. Model",
            titlePanel("Customer Demographic Model"),
            fluidPage(theme = shinytheme("cosmo"),
-           p("Weight the different keywords with a value
-             between 0-100 to represent a potential customer
-             demographic. Make sure values add up to 100"),
+           p("Welcome to the interactive Customer Demographic Model
+             page. Use the sliders below each keyword to create 
+             example customer demographic models by assigning the 
+             keywords a weight from 0-100. The results will be 
+             translated onto a US Map broken down by states as well as
+             the Top 10 States & Cities will be shown below. Please note...
+             Make sure your weights add up to 100 to ensure proper analysis."),
            column(
              width = 3,
-             sliderInput("fitness",
-                         label = "Fitness", 
+             wellPanel(
+             sliderInput("health_related_fitness",
+                         label = "Health Related Fitness", 
                          min = 0, 
                          max = 100, 
                          value = 0),
-             sliderInput("sleep",
-                         label = "Sleep", 
+             sliderInput("improve_focus",
+                         label = "Improve Focus", 
                          min = 0, 
                          max = 100, 
                          value = 0),
-             sliderInput("human_performance",
-                         label = "Human Performance", 
+             sliderInput("improve_sleep",
+                         label = "Improve Sleep", 
+                         min = 0, 
+                         max = 100, 
+                         value = 0),
+             sliderInput("improve_health",
+                         label = "Improve Health", 
+                         min = 0, 
+                         max = 100, 
+                         value = 0),
+             sliderInput("health_supplements",
+                         label = "Health Supplements", 
+                         min = 0, 
+                         max = 100, 
+                         value = 0),
+             sliderInput("time_management",
+                         label = "Time Management", 
+                         min = 0, 
+                         max = 100, 
+                         value = 0),
+             sliderInput("manage_stress",
+                         label = "Manage Stress", 
+                         min = 0, 
+                         max = 100, 
+                         value = 0),
+             sliderInput("meditation",
+                         label = "Meditation", 
+                         min = 0, 
+                         max = 100, 
+                         value = 0),
+             sliderInput("exercise",
+                         label = "Exercise", 
+                         min = 0, 
+                         max = 100, 
+                         value = 0),
+             sliderInput("Peleton",
+                         label = "Peleton", 
                          min = 0, 
                          max = 100, 
                          value = 0),
@@ -138,44 +159,22 @@ ui <- navbarPage(
                          label = "WHOOP", 
                          min = 0, 
                          max = 100, 
-                         value = 0),
-             sliderInput("human_performance",
-                         label = "Human Performance", 
-                         min = 0, 
-                         max = 100, 
-                         value = 0),
-             sliderInput("human_performance",
-                         label = "Human Performance", 
-                         min = 0, 
-                         max = 100, 
-                         value = 0),
-             sliderInput("human_performance",
-                         label = "Human Performance", 
-                         min = 0, 
-                         max = 100, 
-                         value = 0),
-             sliderInput("human_performance",
-                         label = "Human Performance", 
-                         min = 0, 
-                         max = 100, 
-                         value = 0),
-             sliderInput("human_performance",
-                         label = "Human Performance", 
-                         min = 0, 
-                         max = 100, 
                          value = 0)
-           ),
+           )),
            column(
-             width = 9,
-               h3("Model Map"),
+             width = 9,align="middle",
+               h3("Customer Demographic Model (US Map)"),
              plotlyOutput(outputId = "model_map")
            ),
+           column(width = 1),
            column(
-             width = 4, align="right",
+             width = 4, align="middle",
+             h3("Top 10 States"),
              tableOutput("customer_model_regions")
            ),
            column(
-             width = 4,
+             width = 4,align="middle",
+             h3("Top 10 Cities"),
              tableOutput("customer_model_cities")
            ))
   
@@ -240,7 +239,7 @@ server <- function(input, output) {
                 text = ~keyword,
                 locations = ~code,
                 color = ~hits,
-                colors = 'Purples')%>%
+                colors = 'Blues')%>%
       colorbar(title = "Search Interest")%>%
       layout(
         geo = list(
@@ -258,13 +257,13 @@ server <- function(input, output) {
     trends_region %>%
       pivot_wider(names_from = keyword,
                   values_from = hits) %>% 
-      mutate(model = (input$fitness*fitness)/100 + (input$sleep*sleep)/100 + (input$human_performance*`human performance`)/100 + (input$WHOOP*WHOOP)/100) %>% 
+      mutate(model = (input$health_related_fitness*`health related fitness`)/100 + (input$improve_focus*`improve focus`)/100 + (input$improve_sleep*`improve sleep`)/100 + (input$improve_health*`improve health`)/100 + (input$health_supplements*`health supplements`)/100 + (input$time_management*`time management`)/100 + (input$manage_stress*`manage stress`)/100 + (input$meditation*meditation)/100 + (input$exercise*exercise)/100 + (input$Peleton*Peleton)/100 + (input$WHOOP*WHOOP)/100) %>% 
       plot_geo(locationmode = 'USA-states')%>% 
       add_trace(z = ~model,
                 text = "Model",
                 locations = ~code,
                 color = ~model,
-                colors = 'Purples',
+                colors = 'Blues',
                 zmin = 0,
                 zmax = 100)%>%
       colorbar(title = "Search Interest")%>%
@@ -277,13 +276,14 @@ server <- function(input, output) {
   
   
 # adding top 10 regions table with new model data
+# values are not being multiplied for some reason...
   
   output$customer_model_regions <- renderTable({
     
     trends_region %>%
       pivot_wider(names_from = keyword,
                   values_from = hits) %>% 
-      mutate(model = (input$fitness*fitness)/100 + (input$sleep*sleep)/100 + (input$human_performance*`human performance`)/100 + (input$WHOOP*WHOOP)/100) %>% 
+      mutate(model = (input$health_related_fitness*`health related fitness`)/100 + (input$improve_focus*`improve focus`)/100 + (input$improve_sleep*`improve sleep`)/100 + (input$improve_health*`improve health`)/100 + (input$health_supplements*`health supplements`)/100 + (input$time_management*`time management`)/100 + (input$manage_stress*`manage stress`)/100 + (input$meditation*meditation)/100 + (input$exercise*exercise)/100 + (input$Peleton*Peleton)/100 + (input$WHOOP*WHOOP)/100) %>% 
       select(State = state, Interest = model) %>% 
       as_tibble() %>% 
       arrange(desc(Interest)) %>% 
@@ -293,19 +293,21 @@ server <- function(input, output) {
   
 
 # adding top 10 cities table with new model data
-# need to fix last part   
+# needed to include values_fill = 0 for math to add up 
+  
   output$customer_model_cities <- renderTable({
     
     trends_city %>%
       pivot_wider(names_from = keyword,
-                  values_from = hits) %>% 
-      mutate(model = (input$fitness*fitness)/100 + (input$sleep*sleep)/100 + (input$WHOOP*WHOOP)/100) %>% 
+                  values_from = hits,
+                  values_fill = 0) %>%
+      select(-`health supplements`) %>% 
+      select(-`improve health`) %>% 
+      mutate(model =(input$time_management*`time management`)/100 + (input$meditation*meditation)/100 + (input$exercise*exercise)/100 + (input$Peleton*Peleton)/100 + (input$WHOOP*WHOOP)/100) %>% 
       select(City = location, Interest = model) %>% 
       as_tibble() %>% 
       arrange(desc(Interest)) %>% 
-      slice(1:10) %>% 
-      as_gt() %>% 
-      tab_header(title = "Top Interest by Cities")
+      slice(1:10)
     
   })
 }
