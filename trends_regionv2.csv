@@ -1,0 +1,562 @@
+state,hits,keyword,geo,gprop
+Vermont,100,meditation,US,web
+Maine,86,meditation,US,web
+New Hampshire,83,meditation,US,web
+Colorado,78,meditation,US,web
+Massachusetts,76,meditation,US,web
+District of Columbia,75,meditation,US,web
+Rhode Island,73,meditation,US,web
+Connecticut,73,meditation,US,web
+Montana,72,meditation,US,web
+Hawaii,70,meditation,US,web
+New Jersey,69,meditation,US,web
+Oregon,69,meditation,US,web
+Utah,67,meditation,US,web
+New York,67,meditation,US,web
+New Mexico,64,meditation,US,web
+Idaho,63,meditation,US,web
+Maryland,61,meditation,US,web
+California,61,meditation,US,web
+Arizona,60,meditation,US,web
+Alaska,59,meditation,US,web
+Minnesota,59,meditation,US,web
+Washington,58,meditation,US,web
+Nevada,56,meditation,US,web
+Pennsylvania,55,meditation,US,web
+Florida,54,meditation,US,web
+Wisconsin,54,meditation,US,web
+Wyoming,52,meditation,US,web
+Virginia,52,meditation,US,web
+Delaware,51,meditation,US,web
+Illinois,50,meditation,US,web
+Michigan,48,meditation,US,web
+Nebraska,47,meditation,US,web
+Kansas,47,meditation,US,web
+North Carolina,47,meditation,US,web
+Iowa,44,meditation,US,web
+Georgia,44,meditation,US,web
+Missouri,44,meditation,US,web
+Ohio,44,meditation,US,web
+Kentucky,41,meditation,US,web
+Texas,41,meditation,US,web
+Louisiana,40,meditation,US,web
+Tennessee,40,meditation,US,web
+North Dakota,39,meditation,US,web
+South Carolina,39,meditation,US,web
+South Dakota,38,meditation,US,web
+Oklahoma,38,meditation,US,web
+Indiana,38,meditation,US,web
+West Virginia,36,meditation,US,web
+Alabama,35,meditation,US,web
+Arkansas,33,meditation,US,web
+Mississippi,31,meditation,US,web
+Hawaii,100,exercise,US,web
+Maryland,92,exercise,US,web
+New Jersey,91,exercise,US,web
+Vermont,90,exercise,US,web
+New Mexico,88,exercise,US,web
+Virginia,87,exercise,US,web
+California,87,exercise,US,web
+Rhode Island,86,exercise,US,web
+Delaware,86,exercise,US,web
+Massachusetts,85,exercise,US,web
+New York,85,exercise,US,web
+Connecticut,85,exercise,US,web
+New Hampshire,85,exercise,US,web
+Utah,84,exercise,US,web
+North Carolina,82,exercise,US,web
+Illinois,82,exercise,US,web
+Pennsylvania,81,exercise,US,web
+Arizona,81,exercise,US,web
+West Virginia,80,exercise,US,web
+Maine,78,exercise,US,web
+Florida,78,exercise,US,web
+District of Columbia,78,exercise,US,web
+Nevada,78,exercise,US,web
+Georgia,77,exercise,US,web
+Washington,77,exercise,US,web
+Michigan,77,exercise,US,web
+Oregon,77,exercise,US,web
+North Dakota,77,exercise,US,web
+Nebraska,77,exercise,US,web
+Ohio,76,exercise,US,web
+Indiana,76,exercise,US,web
+Missouri,76,exercise,US,web
+Minnesota,76,exercise,US,web
+Colorado,76,exercise,US,web
+Kentucky,75,exercise,US,web
+Wyoming,75,exercise,US,web
+Mississippi,75,exercise,US,web
+South Carolina,75,exercise,US,web
+Wisconsin,74,exercise,US,web
+Kansas,74,exercise,US,web
+Iowa,74,exercise,US,web
+Idaho,74,exercise,US,web
+Tennessee,73,exercise,US,web
+Alabama,73,exercise,US,web
+South Dakota,72,exercise,US,web
+Montana,72,exercise,US,web
+Oklahoma,72,exercise,US,web
+Louisiana,70,exercise,US,web
+Alaska,70,exercise,US,web
+Texas,69,exercise,US,web
+Arkansas,69,exercise,US,web
+District of Columbia,100,Peleton,US,web
+Massachusetts,91,Peleton,US,web
+New Jersey,69,Peleton,US,web
+Connecticut,67,Peleton,US,web
+New Hampshire,62,Peleton,US,web
+Rhode Island,62,Peleton,US,web
+New York,59,Peleton,US,web
+Pennsylvania,53,Peleton,US,web
+Maryland,52,Peleton,US,web
+Colorado,48,Peleton,US,web
+California,46,Peleton,US,web
+Illinois,45,Peleton,US,web
+Vermont,44,Peleton,US,web
+Oregon,44,Peleton,US,web
+Delaware,43,Peleton,US,web
+Washington,42,Peleton,US,web
+Virginia,42,Peleton,US,web
+Maine,40,Peleton,US,web
+Wyoming,40,Peleton,US,web
+Michigan,39,Peleton,US,web
+New Mexico,36,Peleton,US,web
+Alaska,35,Peleton,US,web
+Arizona,34,Peleton,US,web
+Montana,34,Peleton,US,web
+Georgia,32,Peleton,US,web
+Texas,32,Peleton,US,web
+North Carolina,32,Peleton,US,web
+Nebraska,32,Peleton,US,web
+Hawaii,31,Peleton,US,web
+Minnesota,31,Peleton,US,web
+Tennessee,29,Peleton,US,web
+Utah,29,Peleton,US,web
+Ohio,28,Peleton,US,web
+Florida,27,Peleton,US,web
+Wisconsin,27,Peleton,US,web
+Kentucky,26,Peleton,US,web
+Idaho,26,Peleton,US,web
+Nevada,25,Peleton,US,web
+South Dakota,24,Peleton,US,web
+Iowa,23,Peleton,US,web
+Oklahoma,22,Peleton,US,web
+Alabama,21,Peleton,US,web
+Arkansas,20,Peleton,US,web
+South Carolina,20,Peleton,US,web
+North Dakota,20,Peleton,US,web
+Indiana,19,Peleton,US,web
+Kansas,19,Peleton,US,web
+Missouri,19,Peleton,US,web
+West Virginia,18,Peleton,US,web
+Louisiana,18,Peleton,US,web
+Mississippi,6,Peleton,US,web
+Massachusetts,100,WHOOP,US,web
+District of Columbia,85,WHOOP,US,web
+South Dakota,76,WHOOP,US,web
+Alaska,73,WHOOP,US,web
+Vermont,72,WHOOP,US,web
+Idaho,67,WHOOP,US,web
+Colorado,63,WHOOP,US,web
+Connecticut,61,WHOOP,US,web
+Utah,57,WHOOP,US,web
+Nebraska,55,WHOOP,US,web
+New Hampshire,52,WHOOP,US,web
+Michigan,50,WHOOP,US,web
+Tennessee,50,WHOOP,US,web
+North Carolina,49,WHOOP,US,web
+Arkansas,49,WHOOP,US,web
+California,49,WHOOP,US,web
+Virginia,49,WHOOP,US,web
+Kentucky,47,WHOOP,US,web
+Pennsylvania,47,WHOOP,US,web
+Maine,47,WHOOP,US,web
+Mississippi,47,WHOOP,US,web
+New Jersey,47,WHOOP,US,web
+Minnesota,46,WHOOP,US,web
+New York,46,WHOOP,US,web
+Montana,46,WHOOP,US,web
+Florida,46,WHOOP,US,web
+Rhode Island,45,WHOOP,US,web
+Hawaii,45,WHOOP,US,web
+Kansas,45,WHOOP,US,web
+Texas,45,WHOOP,US,web
+Georgia,45,WHOOP,US,web
+Alabama,45,WHOOP,US,web
+Washington,44,WHOOP,US,web
+Iowa,44,WHOOP,US,web
+Ohio,44,WHOOP,US,web
+Indiana,44,WHOOP,US,web
+Arizona,43,WHOOP,US,web
+Oregon,43,WHOOP,US,web
+Illinois,43,WHOOP,US,web
+Maryland,42,WHOOP,US,web
+Nevada,41,WHOOP,US,web
+Oklahoma,41,WHOOP,US,web
+Missouri,40,WHOOP,US,web
+Wisconsin,40,WHOOP,US,web
+South Carolina,40,WHOOP,US,web
+North Dakota,36,WHOOP,US,web
+Louisiana,36,WHOOP,US,web
+Delaware,35,WHOOP,US,web
+West Virginia,34,WHOOP,US,web
+New Mexico,33,WHOOP,US,web
+Wyoming,28,WHOOP,US,web
+Maryland,100,health related fitness,US,web
+South Carolina,65,health related fitness,US,web
+Hawaii,56,health related fitness,US,web
+Florida,52,health related fitness,US,web
+Kansas,44,health related fitness,US,web
+Georgia,41,health related fitness,US,web
+Louisiana,40,health related fitness,US,web
+Wisconsin,39,health related fitness,US,web
+Arizona,38,health related fitness,US,web
+Missouri,38,health related fitness,US,web
+Nevada,34,health related fitness,US,web
+California,34,health related fitness,US,web
+Alabama,32,health related fitness,US,web
+Pennsylvania,32,health related fitness,US,web
+Iowa,30,health related fitness,US,web
+Illinois,29,health related fitness,US,web
+Tennessee,29,health related fitness,US,web
+Kentucky,29,health related fitness,US,web
+Indiana,27,health related fitness,US,web
+North Carolina,27,health related fitness,US,web
+Colorado,26,health related fitness,US,web
+Texas,26,health related fitness,US,web
+New Jersey,25,health related fitness,US,web
+Connecticut,23,health related fitness,US,web
+Arkansas,23,health related fitness,US,web
+Ohio,23,health related fitness,US,web
+New York,22,health related fitness,US,web
+New Mexico,22,health related fitness,US,web
+New Hampshire,20,health related fitness,US,web
+Washington,19,health related fitness,US,web
+Michigan,18,health related fitness,US,web
+Virginia,18,health related fitness,US,web
+Massachusetts,17,health related fitness,US,web
+Oklahoma,13,health related fitness,US,web
+Utah,13,health related fitness,US,web
+Minnesota,10,health related fitness,US,web
+Oregon,6,health related fitness,US,web
+Delaware,0,health related fitness,US,web
+Maine,0,health related fitness,US,web
+North Dakota,0,health related fitness,US,web
+District of Columbia,0,health related fitness,US,web
+Wyoming,0,health related fitness,US,web
+West Virginia,0,health related fitness,US,web
+Mississippi,0,health related fitness,US,web
+Nebraska,0,health related fitness,US,web
+Rhode Island,0,health related fitness,US,web
+Alaska,0,health related fitness,US,web
+Idaho,0,health related fitness,US,web
+Montana,0,health related fitness,US,web
+South Dakota,0,health related fitness,US,web
+Vermont,0,health related fitness,US,web
+Connecticut,100,improve sleep,US,web
+Kansas,97,improve sleep,US,web
+Nevada,97,improve sleep,US,web
+Minnesota,79,improve sleep,US,web
+Colorado,76,improve sleep,US,web
+Florida,73,improve sleep,US,web
+Oregon,72,improve sleep,US,web
+Louisiana,72,improve sleep,US,web
+Michigan,64,improve sleep,US,web
+Iowa,62,improve sleep,US,web
+Georgia,61,improve sleep,US,web
+South Carolina,59,improve sleep,US,web
+Pennsylvania,59,improve sleep,US,web
+Tennessee,57,improve sleep,US,web
+Washington,56,improve sleep,US,web
+Virginia,56,improve sleep,US,web
+Illinois,53,improve sleep,US,web
+North Dakota,53,improve sleep,US,web
+North Carolina,51,improve sleep,US,web
+Indiana,51,improve sleep,US,web
+California,49,improve sleep,US,web
+Wisconsin,48,improve sleep,US,web
+Alabama,48,improve sleep,US,web
+Maryland,44,improve sleep,US,web
+New York,44,improve sleep,US,web
+Texas,43,improve sleep,US,web
+New Jersey,39,improve sleep,US,web
+Massachusetts,39,improve sleep,US,web
+Ohio,34,improve sleep,US,web
+Oklahoma,32,improve sleep,US,web
+Utah,32,improve sleep,US,web
+Missouri,30,improve sleep,US,web
+Arizona,24,improve sleep,US,web
+New Mexico,18,improve sleep,US,web
+Arkansas,14,improve sleep,US,web
+Kentucky,9,improve sleep,US,web
+District of Columbia,0,improve sleep,US,web
+Montana,0,improve sleep,US,web
+Delaware,0,improve sleep,US,web
+Alaska,0,improve sleep,US,web
+Rhode Island,0,improve sleep,US,web
+West Virginia,0,improve sleep,US,web
+South Dakota,0,improve sleep,US,web
+New Hampshire,0,improve sleep,US,web
+Mississippi,0,improve sleep,US,web
+Idaho,0,improve sleep,US,web
+Hawaii,0,improve sleep,US,web
+Maine,0,improve sleep,US,web
+Nebraska,0,improve sleep,US,web
+Vermont,0,improve sleep,US,web
+Wyoming,0,improve sleep,US,web
+Alabama,100,improve focus,US,web
+Mississippi,91,improve focus,US,web
+Kentucky,89,improve focus,US,web
+Oklahoma,71,improve focus,US,web
+Arkansas,71,improve focus,US,web
+Iowa,71,improve focus,US,web
+Florida,68,improve focus,US,web
+North Carolina,64,improve focus,US,web
+Nevada,62,improve focus,US,web
+New Mexico,59,improve focus,US,web
+Ohio,56,improve focus,US,web
+Indiana,56,improve focus,US,web
+South Carolina,54,improve focus,US,web
+Colorado,54,improve focus,US,web
+Georgia,53,improve focus,US,web
+California,52,improve focus,US,web
+Virginia,52,improve focus,US,web
+Maryland,48,improve focus,US,web
+Texas,45,improve focus,US,web
+Louisiana,44,improve focus,US,web
+Connecticut,41,improve focus,US,web
+Wisconsin,40,improve focus,US,web
+Missouri,39,improve focus,US,web
+Massachusetts,39,improve focus,US,web
+New York,39,improve focus,US,web
+New Jersey,38,improve focus,US,web
+Tennessee,38,improve focus,US,web
+Illinois,38,improve focus,US,web
+Pennsylvania,36,improve focus,US,web
+Utah,35,improve focus,US,web
+Oregon,33,improve focus,US,web
+Washington,31,improve focus,US,web
+Nebraska,30,improve focus,US,web
+Michigan,26,improve focus,US,web
+Minnesota,25,improve focus,US,web
+Kansas,23,improve focus,US,web
+Arizona,20,improve focus,US,web
+Vermont,0,improve focus,US,web
+Wyoming,0,improve focus,US,web
+Montana,0,improve focus,US,web
+New Hampshire,0,improve focus,US,web
+Maine,0,improve focus,US,web
+North Dakota,0,improve focus,US,web
+West Virginia,0,improve focus,US,web
+South Dakota,0,improve focus,US,web
+Idaho,0,improve focus,US,web
+Delaware,0,improve focus,US,web
+Rhode Island,0,improve focus,US,web
+Hawaii,0,improve focus,US,web
+Alaska,0,improve focus,US,web
+District of Columbia,0,improve focus,US,web
+North Dakota,100,improve health,US,web
+Maryland,91,improve health,US,web
+Arizona,81,improve health,US,web
+District of Columbia,79,improve health,US,web
+Florida,75,improve health,US,web
+South Carolina,75,improve health,US,web
+Indiana,74,improve health,US,web
+Nevada,73,improve health,US,web
+Kansas,71,improve health,US,web
+Pennsylvania,70,improve health,US,web
+Wisconsin,69,improve health,US,web
+Michigan,68,improve health,US,web
+Arkansas,67,improve health,US,web
+Mississippi,67,improve health,US,web
+Minnesota,66,improve health,US,web
+Colorado,66,improve health,US,web
+Kentucky,65,improve health,US,web
+New Mexico,65,improve health,US,web
+West Virginia,64,improve health,US,web
+New York,64,improve health,US,web
+Texas,62,improve health,US,web
+Wyoming,62,improve health,US,web
+South Dakota,62,improve health,US,web
+Alabama,62,improve health,US,web
+Rhode Island,62,improve health,US,web
+Utah,62,improve health,US,web
+California,61,improve health,US,web
+New Jersey,60,improve health,US,web
+Washington,60,improve health,US,web
+Connecticut,60,improve health,US,web
+Virginia,59,improve health,US,web
+North Carolina,58,improve health,US,web
+Tennessee,58,improve health,US,web
+Idaho,58,improve health,US,web
+Hawaii,58,improve health,US,web
+Illinois,58,improve health,US,web
+Missouri,57,improve health,US,web
+New Hampshire,57,improve health,US,web
+Louisiana,55,improve health,US,web
+Ohio,55,improve health,US,web
+Georgia,55,improve health,US,web
+Oklahoma,51,improve health,US,web
+Nebraska,50,improve health,US,web
+Maine,46,improve health,US,web
+Massachusetts,46,improve health,US,web
+Iowa,44,improve health,US,web
+Oregon,42,improve health,US,web
+Delaware,37,improve health,US,web
+Montana,25,improve health,US,web
+Vermont,0,improve health,US,web
+Alaska,0,improve health,US,web
+Utah,100,health supplements,US,web
+Montana,90,health supplements,US,web
+Idaho,76,health supplements,US,web
+Nevada,72,health supplements,US,web
+Kentucky,70,health supplements,US,web
+Colorado,68,health supplements,US,web
+Nebraska,66,health supplements,US,web
+West Virginia,65,health supplements,US,web
+Washington,65,health supplements,US,web
+Maine,64,health supplements,US,web
+Michigan,63,health supplements,US,web
+New York,62,health supplements,US,web
+Kansas,61,health supplements,US,web
+Mississippi,61,health supplements,US,web
+North Carolina,59,health supplements,US,web
+Oklahoma,59,health supplements,US,web
+South Carolina,58,health supplements,US,web
+Connecticut,57,health supplements,US,web
+Hawaii,56,health supplements,US,web
+Oregon,56,health supplements,US,web
+Florida,56,health supplements,US,web
+Minnesota,56,health supplements,US,web
+Illinois,55,health supplements,US,web
+Arizona,54,health supplements,US,web
+Texas,54,health supplements,US,web
+New Jersey,54,health supplements,US,web
+Ohio,54,health supplements,US,web
+Delaware,54,health supplements,US,web
+Louisiana,53,health supplements,US,web
+Rhode Island,53,health supplements,US,web
+Arkansas,52,health supplements,US,web
+Massachusetts,51,health supplements,US,web
+New Mexico,51,health supplements,US,web
+California,50,health supplements,US,web
+Georgia,50,health supplements,US,web
+Missouri,50,health supplements,US,web
+Pennsylvania,49,health supplements,US,web
+Indiana,48,health supplements,US,web
+District of Columbia,48,health supplements,US,web
+Tennessee,48,health supplements,US,web
+Virginia,48,health supplements,US,web
+Iowa,48,health supplements,US,web
+Wisconsin,47,health supplements,US,web
+Maryland,47,health supplements,US,web
+Alabama,42,health supplements,US,web
+North Dakota,41,health supplements,US,web
+New Hampshire,38,health supplements,US,web
+Wyoming,0,health supplements,US,web
+Vermont,0,health supplements,US,web
+South Dakota,0,health supplements,US,web
+Alaska,0,health supplements,US,web
+North Dakota,100,time management,US,web
+Wyoming,90,time management,US,web
+District of Columbia,90,time management,US,web
+Hawaii,77,time management,US,web
+South Carolina,76,time management,US,web
+Maryland,72,time management,US,web
+North Carolina,71,time management,US,web
+Alabama,71,time management,US,web
+Oklahoma,71,time management,US,web
+Arkansas,66,time management,US,web
+Virginia,66,time management,US,web
+New York,65,time management,US,web
+Mississippi,65,time management,US,web
+Georgia,64,time management,US,web
+Texas,64,time management,US,web
+Florida,64,time management,US,web
+New Mexico,62,time management,US,web
+Arizona,61,time management,US,web
+Connecticut,60,time management,US,web
+California,60,time management,US,web
+Idaho,60,time management,US,web
+Louisiana,60,time management,US,web
+New Jersey,59,time management,US,web
+Kentucky,59,time management,US,web
+Colorado,58,time management,US,web
+Missouri,58,time management,US,web
+Iowa,58,time management,US,web
+Washington,56,time management,US,web
+Illinois,56,time management,US,web
+West Virginia,55,time management,US,web
+Nevada,54,time management,US,web
+Utah,53,time management,US,web
+Oregon,53,time management,US,web
+Indiana,52,time management,US,web
+Wisconsin,52,time management,US,web
+Massachusetts,52,time management,US,web
+Vermont,51,time management,US,web
+New Hampshire,51,time management,US,web
+Ohio,51,time management,US,web
+Tennessee,51,time management,US,web
+Minnesota,51,time management,US,web
+Alaska,51,time management,US,web
+Michigan,50,time management,US,web
+Pennsylvania,50,time management,US,web
+Rhode Island,49,time management,US,web
+Delaware,48,time management,US,web
+South Dakota,47,time management,US,web
+Kansas,46,time management,US,web
+Montana,43,time management,US,web
+Nebraska,40,time management,US,web
+Maine,35,time management,US,web
+Kansas,100,manage stress,US,web
+North Carolina,66,manage stress,US,web
+Connecticut,65,manage stress,US,web
+Nebraska,61,manage stress,US,web
+Oklahoma,54,manage stress,US,web
+Arizona,53,manage stress,US,web
+Virginia,52,manage stress,US,web
+Indiana,47,manage stress,US,web
+Missouri,46,manage stress,US,web
+Maryland,43,manage stress,US,web
+Illinois,43,manage stress,US,web
+Georgia,43,manage stress,US,web
+Michigan,41,manage stress,US,web
+Iowa,41,manage stress,US,web
+Oregon,40,manage stress,US,web
+Ohio,39,manage stress,US,web
+Idaho,38,manage stress,US,web
+California,36,manage stress,US,web
+Texas,36,manage stress,US,web
+Utah,36,manage stress,US,web
+Mississippi,35,manage stress,US,web
+Florida,33,manage stress,US,web
+Wisconsin,30,manage stress,US,web
+Minnesota,30,manage stress,US,web
+Louisiana,30,manage stress,US,web
+Kentucky,30,manage stress,US,web
+New Mexico,30,manage stress,US,web
+Nevada,30,manage stress,US,web
+Pennsylvania,30,manage stress,US,web
+Massachusetts,29,manage stress,US,web
+South Carolina,29,manage stress,US,web
+New York,27,manage stress,US,web
+New Jersey,25,manage stress,US,web
+Arkansas,24,manage stress,US,web
+Alabama,22,manage stress,US,web
+Delaware,19,manage stress,US,web
+Washington,19,manage stress,US,web
+Colorado,15,manage stress,US,web
+Tennessee,14,manage stress,US,web
+South Dakota,0,manage stress,US,web
+Alaska,0,manage stress,US,web
+Vermont,0,manage stress,US,web
+Hawaii,0,manage stress,US,web
+Montana,0,manage stress,US,web
+District of Columbia,0,manage stress,US,web
+Maine,0,manage stress,US,web
+West Virginia,0,manage stress,US,web
+Rhode Island,0,manage stress,US,web
+New Hampshire,0,manage stress,US,web
+North Dakota,0,manage stress,US,web
+Wyoming,0,manage stress,US,web

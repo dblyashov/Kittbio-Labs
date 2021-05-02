@@ -1,4 +1,3 @@
-
 library(shiny)
 library(tidyverse)
 library(DT)
@@ -8,10 +7,13 @@ library(shinythemes)
 
 
 
-# Define UI for application that draws a histogram
+# Define UI for application 
+
 ui <- navbarPage(
   "Kittbio Labs: Customer Demo",
-  
+
+# defining my about page
+
   tabPanel("About",
            fluidPage(theme = shinytheme("cosmo"),
            titlePanel("About"),
@@ -42,7 +44,10 @@ ui <- navbarPage(
            HTML("<h5>My name is Dennis Blyashov and I study Economics and 
              Neuroscience. 
              You can reach me at dblyashov@college.harvard.edu.<h5>"))),
-  
+ 
+# defining my next page, Google Trends
+# using column( width = ) to set the dimensions of the page
+
   tabPanel("Google Trends",
            titlePanel("Keyword Analysis"),
         fluidPage(theme = shinytheme("cosmo"),
@@ -55,6 +60,9 @@ ui <- navbarPage(
                   ),
            column(
              width = 3,
+
+# selectInput() used here to create a dropdown list of choices
+
              selectInput(
                           inputId = "keyword",
                           label = "Search Term",
@@ -76,6 +84,9 @@ ui <- navbarPage(
                plotlyOutput(outputId = "us_region_plot")
            ))),
   
+# defining my next tab, Model
+# using similar appraoch as before 
+
   tabPanel("Model",
       fluidPage(theme = shinytheme("cosmo"),
         titlePanel("Model Title"),
@@ -96,6 +107,9 @@ ui <- navbarPage(
                         )
            )),
   
+# defining the last tab, Customer Demo. Model
+# same logic as before 
+
   tabPanel("Customer Demo. Model",
            titlePanel("Customer Demographic Model"),
            fluidPage(theme = shinytheme("cosmo"),
@@ -109,6 +123,9 @@ ui <- navbarPage(
            column(
              width = 3,
              wellPanel(
+          
+# sliderInput() creates a slider function to use in my model
+               
              sliderInput("health_related_fitness",
                          label = "Health Related Fitness", 
                          min = 0, 
@@ -189,8 +206,8 @@ ui <- navbarPage(
 server <- function(input, output) {
 
   
-# table for model page
-## CANT FIGURE OUT WHY ONLY WHOOP TABLE LOADS!  
+# table for model page based on drop down choices
+  
   output$table <- render_gt({
     
     if(input$model_type == "Meditation"){
@@ -307,7 +324,7 @@ server <- function(input, output) {
   
 })
   
-# interactive US map 
+# interactive US map using keyword dropdown
   
   output$us_region_plot <- renderPlotly({
     
@@ -331,10 +348,7 @@ server <- function(input, output) {
       )
   })
   
-  
-# slider outputs
-  
-# making a table with slider inputs 
+# creating a US map using slider inputs in the model
   
   output$model_map <- renderPlotly({
     
@@ -360,7 +374,6 @@ server <- function(input, output) {
   
   
 # adding top 10 regions table with new model data
-# values are not being multiplied for some reason...
   
   output$customer_model_regions <- renderTable({
     
