@@ -84,7 +84,11 @@ ui <- navbarPage(
                  selectInput(
                    inputId = "model_type",
                    label = "Keyword for Regression",
-                   choices = c("Fitness","Sleep","Human_Performance", "WHOOP")
+                   choices = c("health related fitness", "improve focus",
+                               "improve sleep", "improve health",
+                               "health supplements","time management",
+                               "manage stress","meditation","exercise",
+                               "Peleton","WHOOP")
                              )),
                  mainPanel(
                    gt_output("table")
@@ -189,25 +193,105 @@ server <- function(input, output) {
 ## CANT FIGURE OUT WHY ONLY WHOOP TABLE LOADS!  
   output$table <- render_gt({
     
-    if(input$model_type == "Fitness"){
-      fit_fitness %>%
+    if(input$model_type == "Meditation"){
+    fit_meditation %>%
+      tbl_regression(include = everything(),
+                     intercept = TRUE,
+                     estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+      as_gt() %>%
+      tab_header(title = "A Model of 'Meditation' on other Keywords",
+                 subtitle = "The Results are ambigious") 
+    }
+    else if(input$model_type == "health related fitness"){
+      fit_health_related_fitness %>%
         tbl_regression(include = everything(),
                        intercept = TRUE,
                        estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
         as_gt() %>%
-        tab_header(title = "A Model of 'Fitness' on other Keywords",
+        tab_header(title = "A Model of 'Health Related Fitness' on other Keywords",
                    subtitle = "The Results are ambigious")
     }
-    if(input$model_type == "Sleep"){
-      model_table_sleep
+    else if(input$model_type == "exercise"){
+      fit_exercise %>%
+        tbl_regression(include = everything(),
+                       intercept = TRUE,
+                       estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+        as_gt() %>%
+        tab_header(title = "A Model of 'Exercise' on other Keywords",
+                   subtitle = "The Results are ambigious")
     }
-    if(input$model_type == "Human_Performance"){
-      model_table_human_performance
+    else if(input$model_type == "health supplements"){
+      fit_health_supplements %>%
+        tbl_regression(include = everything(),
+                       intercept = TRUE,
+                       estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+        as_gt() %>%
+        tab_header(title = "A Model of 'Health Supplements' on other Keywords",
+                   subtitle = "The Results are ambigious")
     }
-    if(input$model_type == "WHOOP"){
-      model_table_WHOOP
+    else if(input$model_type == "improve focus"){
+      fit_improve_focus %>%
+        tbl_regression(include = everything(),
+                       intercept = TRUE,
+                       estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+        as_gt() %>%
+        tab_header(title = "A Model of 'Improve Focus' on other Keywords",
+                   subtitle = "The Results are ambigious")
     }
-    
+    else if(input$model_type == "improve health"){
+      fit_improve_health %>%
+        tbl_regression(include = everything(),
+                       intercept = TRUE,
+                       estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+        as_gt() %>%
+        tab_header(title = "A Model of 'Improve Health' on other Keywords",
+                   subtitle = "The Results are ambigious")
+    }
+    else if(input$model_type == "improve sleep"){
+      fit_improve_sleep %>%
+        tbl_regression(include = everything(),
+                       intercept = TRUE,
+                       estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+        as_gt() %>%
+        tab_header(title = "A Model of 'Improve Sleep' on other Keywords",
+                   subtitle = "The Results are ambigious")
+    }
+    else if(input$model_type == "manage stress"){
+      fit_manage_stress %>%
+        tbl_regression(include = everything(),
+                       intercept = TRUE,
+                       estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+        as_gt() %>%
+        tab_header(title = "A Model of 'Manage Stress' on other Keywords",
+                   subtitle = "The Results are ambigious")
+    }
+    else if(input$model_type == "time management"){
+      fit_time_management %>%
+        tbl_regression(include = everything(),
+                       intercept = TRUE,
+                       estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+        as_gt() %>%
+        tab_header(title = "A Model of 'Time Management' on other Keywords",
+                   subtitle = "The Results are ambigious")
+    }
+    else if(input$model_type == "Peleton"){
+      fit_Peleton %>%
+        tbl_regression(include = everything(),
+                       intercept = TRUE,
+                       estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+        as_gt() %>%
+        tab_header(title = "A Model of 'Peleton' on other Keywords",
+                   subtitle = "The Results are ambigious")
+    }
+    else if (input$model_type == "WHOOP"){
+      fit_WHOOP %>%
+        tbl_regression(include = everything(),
+                       intercept = TRUE,
+                       estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+        as_gt() %>%
+        tab_header(title = "A Model of 'WHOOP' on other Keywords",
+                   subtitle = "The Results are ambigious")
+    }
   })
 
 # interactive city top 10 table using inputID = term

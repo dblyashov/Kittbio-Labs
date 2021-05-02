@@ -1,6 +1,6 @@
 library(gtrendsR)
 library(tidyverse)
-#library(rstanarm)
+library(rstanarm)
 library(gt)
 library(gtsummary)
 
@@ -114,59 +114,219 @@ trends_region <- trends_region %>%
 # linear regress on keyword "fitness" with all other keywords
 
 
-linear_regress <- trends_region %>%
+linear_regress <- trends_region %>% 
   pivot_wider(names_from = keyword,
               values_from = hits)
 
 # creating fits for all variables
 
-# fit_fitness <- stan_glm( data = linear_regress,
-                         #formula = fitness ~ sleep + `human performance`+ WHOOP,
-                         #refresh = 0) 
+# fit_meditation <- stan_glm( data = linear_regress,
+#                         formula = meditation ~ `health related fitness` + `improve focus` + `improve sleep` + `improve health` + `health supplements` + `time management` + `manage stress` + exercise + Peleton + WHOOP,
+#                         refresh = 0) 
+# saveRDS(fit_meditation, "fit_meditation")
 
-# fit_sleep <- stan_glm( data = linear_regress,
-                       #formula = sleep ~  fitness + `human performance`+ WHOOP,
-                       #refresh = 0)
-# fit_human_performance <- stan_glm( data = linear_regress,
-                                   #formula = `human performance` ~ sleep + fitness + WHOOP,
-                                   #refresh = 0)
-# fit_WHOOP <- stan_glm( data = linear_regress,
-                       #formula = WHOOP ~  fitness + sleep + `human performance`,
-                       #refresh = 0)
+fit_meditation <- readRDS("fit_meditation")
 
+# fit_health_related_fitness <- stan_glm( data = linear_regress,
+#                         formula = `health related fitness` ~ `meditation` + `improve focus` + `improve sleep` + `improve health` + `health supplements` + `time management` + `manage stress` + exercise + Peleton + WHOOP,
+#                         refresh = 0) 
+# saveRDS(fit_health_related_fitness, "fit_health_related_fitness")
+
+fit_health_related_fitness <- readRDS("fit_health_related_fitness")
+
+# fit_improve_focus <- stan_glm( data = linear_regress,
+#                         formula = `improve focus` ~ `meditation` + `health related fitness` + `improve sleep` + `improve health` + `health supplements` + `time management` + `manage stress` + exercise + Peleton + WHOOP,
+#                         refresh = 0) 
+# saveRDS(fit_improve_focus, "fit_improve_focus")
+
+fit_improve_focus <- readRDS("fit_improve_focus")
+
+# fit_improve_sleep <- stan_glm( data = linear_regress,
+#                               formula = `improve sleep` ~ `meditation` + `health related fitness` + `improve focus` + `improve health` + `health supplements` + `time management` + `manage stress` + exercise + Peleton + WHOOP,
+#                               refresh = 0) 
+# saveRDS(fit_improve_sleep, "fit_improve_sleep")
+
+fit_improve_sleep <- readRDS("fit_improve_sleep")
+
+# fit_improve_health <- stan_glm( data = linear_regress,
+#                               formula = `improve health` ~ `meditation` + `health related fitness` + `improve focus` + `improve sleep` + `health supplements` + `time management` + `manage stress` + exercise + Peleton + WHOOP,
+#                               refresh = 0) 
+# saveRDS(fit_improve_health, "fit_improve_health")
+
+fit_improve_health <- readRDS("fit_improve_health")
+
+# fit_health_supplements <- stan_glm( data = linear_regress,
+#                                formula = `health supplements` ~ `meditation` + `health related fitness` + `improve focus` + `improve sleep` + `improve health` + `time management` + `manage stress` + exercise + Peleton + WHOOP,
+#                                refresh = 0) 
+# saveRDS(fit_health_supplements, "fit_health_supplements")
+
+fit_health_supplements <- readRDS("fit_health_supplements")
+
+# fit_time_management <- stan_glm( data = linear_regress,
+#                                formula = `time management` ~ `meditation` + `health related fitness` + `improve focus` + `improve sleep` + `improve health` + `health supplements` + `manage stress` + exercise + Peleton + WHOOP,
+#                                refresh = 0) 
+#  saveRDS(fit_time_management, "fit_time_management")
+
+fit_time_management <- readRDS("fit_time_management")
+
+# fit_manage_stress <- stan_glm( data = linear_regress,
+#                                 formula = `manage stress` ~ `meditation` + `health related fitness` + `improve focus` + `improve sleep` + `improve health` + `health supplements` + `time management` + exercise + Peleton + WHOOP,
+#                                 refresh = 0) 
+# saveRDS(fit_manage_stress, "fit_manage_stress")
+
+fit_manage_stress <- readRDS("fit_manage_stress")
+
+#fit_exercise <- stan_glm( data = linear_regress,
+#                               formula = exercise ~ `meditation` + `health related fitness` + `improve focus` + `improve sleep` + `improve health` + `health supplements` + `time management` + `manage stress` + Peleton + WHOOP,
+#                               refresh = 0) 
+# saveRDS(fit_exercise, "fit_exercise")
+
+fit_exercise <- readRDS("fit_exercise")
+
+# fit_Peleton <- stan_glm( data = linear_regress,
+#                               formula = Peleton ~ `meditation` + `health related fitness` + `improve focus` + `improve sleep` + `improve health` + `health supplements` + `time management` + `manage stress` + exercise + WHOOP,
+#                               refresh = 0) 
+# saveRDS(fit_Peleton, "fit_Peleton")
+
+fit_Peleton <- readRDS("fit_Peleton")
+
+ fit_WHOOP <- stan_glm( data = linear_regress,
+                               formula = WHOOP ~ `meditation` + `health related fitness` + `improve focus` + `improve sleep` + `improve health` + `health supplements` + `time management` + `manage stress` + exercise + Peleton,
+                               refresh = 0) 
+ saveRDS(fit_WHOOP, "fit_WHOOP")
+
+fit_WHOOP <- readRDS("fit_WHOOP")
 
 # making a table with fits
 
-# model_table_fitness <- fit_fitness %>%
-#  tbl_regression(include = everything(),
-#                 intercept = TRUE,
-#                 estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
-#  as_gt() %>%
-#  tab_header(title = "A Model of 'Fitness' on other Keywords",
-#             subtitle = "The Results are ambigious") 
+# FIRST TABLE
 
-#model_table_sleep <- fit_sleep %>%
-#  tbl_regression(include = everything(),
-#                 intercept = TRUE,
-#                 estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
-#  as_gt() %>%
-#  tab_header(title = "A Model of 'Sleep' on other Keywords",
-#             subtitle = "The Results are ambigious") 
+ model_table_meditation <- fit_meditation %>%
+  tbl_regression(include = everything(),
+                 intercept = TRUE,
+                 estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+  as_gt() %>%
+  tab_header(title = "A Model of 'Meditation' on other Keywords",
+            subtitle = "The Results are ambigious") 
+ 
+ model_table_meditation
 
+ # SECOND TABLE
+ 
+ model_table_health_related_fitness <- fit_health_related_fitness %>%
+   tbl_regression(include = everything(),
+                  intercept = TRUE,
+                  estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+   as_gt() %>%
+   tab_header(title = "A Model of 'Health Related Fitness' on other Keywords",
+              subtitle = "The Results are ambigious") 
+ 
+ model_table_health_related_fitness
+ 
+ # THIRD TABLE
+ 
+ model_table_exercise <- fit_exercise %>%
+   tbl_regression(include = everything(),
+                  intercept = TRUE,
+                  estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+   as_gt() %>%
+   tab_header(title = "A Model of 'Exercise' on other Keywords",
+              subtitle = "The Results are ambigious") 
+ 
+ model_table_exercise
 
-#model_table_human_performance <- fit_human_performance %>%
-#  tbl_regression(include = everything(),
-#                 intercept = TRUE,
-#                 estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
-#  as_gt() %>%
-#  tab_header(title = "A Model of 'Human Performance' on other Keywords",
-#             subtitle = "The Results are ambigious") 
+# FOURTH TABLE
+ 
+ model_table_health_supplements <- fit_health_supplements %>%
+   tbl_regression(include = everything(),
+                  intercept = TRUE,
+                  estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+   as_gt() %>%
+   tab_header(title = "A Model of 'Health Supplements' on other Keywords",
+              subtitle = "The Results are ambigious") 
+ 
+ model_table_health_supplements
+ 
+ # FIFTH TABLE 
+ 
+ model_table_improve_focus <- fit_improve_focus %>%
+   tbl_regression(include = everything(),
+                  intercept = TRUE,
+                  estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+   as_gt() %>%
+   tab_header(title = "A Model of 'Improve Focus' on other Keywords",
+              subtitle = "The Results are ambigious") 
+ 
+ model_table_improve_focus
+ 
+ # Sixth Table
+ 
+ model_table_improve_health <- fit_improve_health %>%
+   tbl_regression(include = everything(),
+                  intercept = TRUE,
+                  estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+   as_gt() %>%
+   tab_header(title = "A Model of 'Improve Health' on other Keywords",
+              subtitle = "The Results are ambigious") 
+ 
+ model_table_improve_health
+ 
+ # Seventh Table
+ 
+ model_table_improve_sleep <- fit_improve_sleep %>%
+   tbl_regression(include = everything(),
+                  intercept = TRUE,
+                  estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+   as_gt() %>%
+   tab_header(title = "A Model of 'Improve Sleep' on other Keywords",
+              subtitle = "The Results are ambigious") 
+ 
+ model_table_improve_sleep
+ 
+ # Eigthhh Table
+ 
+ model_table_manage_stress <- fit_manage_stress %>%
+   tbl_regression(include = everything(),
+                  intercept = TRUE,
+                  estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+   as_gt() %>%
+   tab_header(title = "A Model of 'Manage Stress' on other Keywords",
+              subtitle = "The Results are ambigious") 
+ 
+ model_table_manage_stress
+ 
+ # Ninth Table
+ 
+ model_table_time_management <- fit_time_management %>%
+   tbl_regression(include = everything(),
+                  intercept = TRUE,
+                  estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+   as_gt() %>%
+   tab_header(title = "A Model of 'Time Management' on other Keywords",
+              subtitle = "The Results are ambigious") 
+ 
+ model_table_time_management
 
-#model_table_WHOOP <- fit_WHOOP %>%
-#  tbl_regression(include = everything(),
-#                 intercept = TRUE,
-#                 estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
-#  as_gt() %>%
-#  tab_header(title = "A Model of 'WHOOP' on other Keywords",
-#             subtitle = "The Results are ambigious") 
-
+ # Tenth Table
+ 
+ model_table_Peleton <- fit_Peleton %>%
+   tbl_regression(include = everything(),
+                  intercept = TRUE,
+                  estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+   as_gt() %>%
+   tab_header(title = "A Model of 'Peleton' on other Keywords",
+              subtitle = "The Results are ambigious") 
+ 
+ model_table_Peleton
+ 
+ # Eleventh Table
+ 
+ model_table_WHOOP <- fit_WHOOP %>%
+   tbl_regression(include = everything(),
+                  intercept = TRUE,
+                  estimate_fun = function(x) style_sigfig(x, digits = 3)) %>%
+   as_gt() %>%
+   tab_header(title = "A Model of 'WHOOP' on other Keywords",
+              subtitle = "The Results are ambigious") 
+ 
+ model_table_WHOOP
